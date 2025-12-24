@@ -3,6 +3,7 @@ SUPAH ROOMBA
 
 
 
+```mermaid
 stateDiagram-v2
   [*] --> IDLE: start
   IDLE --> DRIVE_FORWARD: start
@@ -10,3 +11,4 @@ stateDiagram-v2
   AVOIDING --> DRIVE_FORWARD: clear
   DRIVE_FORWARD --> IDLE: stop
   IDLE --> [*]: exit / shutdown
+```
