@@ -1,17 +1,17 @@
 /*
  * Purpose:
- * - Step 0 smoke test to verify the project runs.
+ * - Step 1 entry point:
+ *   Runs a small headless simulation loop and prints telemetry each tick.
  */
-
-
-
-// this line for the ackage path is fine i have no idea why
 package com.practice.roomba;
+
+import com.practice.roomba.app.RoombaApplication;
 
 public class Main
 {
    public static void main(String[] arguments)
    {
-      System.out.println("Step 0 OK: Roomba headless project booted.");
+      RoombaApplication roombaApplication = new RoombaApplication();
+      roombaApplication.runFixedNumberOfTicks(60);
    }
 }
