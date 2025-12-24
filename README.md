@@ -1,7 +1,7 @@
 SUPAH ROOMBA
 
 
-
+Finite State Machine of the SUPAH ROOMBA
 
 ```mermaid
 stateDiagram-v2
