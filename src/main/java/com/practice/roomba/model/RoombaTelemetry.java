@@ -68,6 +68,12 @@ public class RoombaTelemetry
       this.currentStateName = currentStateName;
    }
 
+   public com.practice.roomba.fsm.RoombaStateName getCurrentStateName()
+   {
+   return currentStateName;
+   }
+
+
    public void setStatusMessage(String statusMessage)
    {
       this.statusMessage = statusMessage;
