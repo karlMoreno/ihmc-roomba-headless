@@ -13,6 +13,8 @@ repositories { mavenCentral() }
 
 dependencies {
     implementation("us.ihmc:euclid:0.22.5")
+    implementation("us.ihmc:ihmc-yovariables:0.13.6")
+
 }
 
 java {

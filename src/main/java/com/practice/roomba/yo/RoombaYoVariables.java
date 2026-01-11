@@ -22,7 +22,7 @@ public class RoombaYoVariables {
 
     private final YoDouble positionXMetersYoVariable = new YoDouble("positionXMeters", roombaYoRegistry);
     private final YoDouble positionYMetersYoVariable = new YoDouble("positionYMeters", roombaYoRegistry);
-    private final YoDouble positionHeadingRadiansYoVariable = new YoDouble("headingRadians", roombaYoRegistry);
+    private final YoDouble headingRadiansYoVariable = new YoDouble("headingRadians", roombaYoRegistry);
 
     private final YoDouble linearVelocityMetersPerSecondYoVariable = new YoDouble("linearVelocityMetersPerSecond",
             roombaYoRegistry);
@@ -41,7 +41,7 @@ public class RoombaYoVariables {
 
         positionXMetersYoVariable.set(roombaTelemetry.getRoombaPose2D().getPositionXMeters());
         positionYMetersYoVariable.set(roombaTelemetry.getRoombaPose2D().getPositionYMeters());
-        positionHeadingRadiansYoVariable.set(roombaTelemetry.getRoombaPose2D().getHeadingRadians());
+        headingRadiansYoVariable.set(roombaTelemetry.getRoombaPose2D().getHeadingRadians());
 
         linearVelocityMetersPerSecondYoVariable.set(roombaTelemetry.getLinearVelocityMetersPerSecond());
         angularVelocityRadiansPerSecondYoVariable.set(roombaTelemetry.getAngularVelocityRadiansPerSecond());
@@ -59,7 +59,7 @@ public class RoombaYoVariables {
              positionYMetersYoVariable.getDoubleValue(),
              headingRadiansYoVariable.getDoubleValue(),
              linearVelocityMetersPerSecondYoVariable.getDoubleValue(),
-             angularVelocityRadiansYoVariable.getDoubleValue(),
+             angularVelocityRadiansPerSecondYoVariable.getDoubleValue(),
              roombaStateNameYoVariable.getEnumValue()
        );
     }
@@ -92,7 +92,7 @@ public class RoombaYoVariables {
 
    public double getAngularVelocityRadiansPerSecond()
    {
-      return angularVelocityRadiansYoVariable.getDoubleValue();
+      return angularVelocityRadiansPerSecondYoVariable.getDoubleValue();
    }
 
    public RoombaStateName getRoombaStateName()

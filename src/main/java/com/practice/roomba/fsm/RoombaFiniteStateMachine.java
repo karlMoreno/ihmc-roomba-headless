@@ -13,6 +13,7 @@ public class RoombaFiniteStateMachine
 
    private RoombaState currentRoombaState;
 
+   //constructor takes in roombaTelemetry data
    public RoombaFiniteStateMachine(RoombaTelemetry roombaTelemetry)
    {
       this.roombaTelemetry = roombaTelemetry;
