@@ -14,6 +14,7 @@ repositories { mavenCentral() }
 dependencies {
     implementation("us.ihmc:euclid:0.22.5")
     implementation("us.ihmc:ihmc-yovariables:0.13.6")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
 
 }
 
@@ -24,3 +25,8 @@ java {
 application {
     mainClass.set("com.practice.roomba.Main")
 }
+
+tasks.test {
+    useJUnitPlatform()
+}
+
