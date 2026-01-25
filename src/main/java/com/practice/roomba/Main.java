@@ -10,6 +10,8 @@ import com.practice.roomba.app.RoombaApplication;
 import com.practice.roomba.simulation.SimulationWorld;
 import com.practice.roomba.simulation.WorldObstacle;
 
+import com.practice.roomba.simulation.SimulationClock;
+
 public class Main
 {
    public static void main(String[] arguments)
@@ -17,18 +19,26 @@ public class Main
       // RoombaApplication roombaApplication = new RoombaApplication();
       // roombaApplication.runFixedNumberOfTicks(60);
 
-      SimulationWorld simulationWorld = new SimulationWorld();
+      // instantiate simulation clock
+         SimulationClock simulationClock = new SimulationClock(0.02);
 
-      // anonymous object java magic da hek
-      simulationWorld.addObstacle(WorldObstacle.axisAlignedRectangle(0.0,0.0,1.0,1.0));
+         System.out.println("time seconds upon start " + simulationClock.getSimulationTimeSeconds());
+         System.out.println("step seconds upon start " +simulationClock.getSimulationStepSeconds());
+         
+      // for loop stepping through clock
+      for(int i = 0; i <= 5; i++)
+         {
+            System.out.println("Step 3B tick: t=" + simulationClock.getSimulationTimeSeconds());
+            simulationClock.step();
+         }
 
-      boolean isInsideFirstQuery = simulationWorld.isPointInsideAnyObstacle(0.5, 0.5);
-      boolean isInsideSecondQuery = simulationWorld.isPointInsideAnyObstacle(2.0, 2.0);
-
-      System.out.println("Step 3A OK: (0.5,0.5) inside obstacle? " + isInsideFirstQuery);
-      System.out.println("Step 3A OK: (2.0,2.0) inside obstacle? " + isInsideSecondQuery);
+      //print results
+      System.out.println("time seconds upon end " + simulationClock.getSimulationTimeSeconds());
+      System.out.println("step seconds upon end " +simulationClock.getSimulationStepSeconds());
 
 
+
+      
 
       
    }
