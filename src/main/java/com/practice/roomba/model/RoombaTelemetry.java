@@ -2,6 +2,10 @@
  * Purpose:
  * - Holds all runtime values we care about printing/logging.
  * - In later steps, this becomes the bridge to IHMC "YoVariables" style logging.
+ *
+ * Your task:
+ * - Implement toConsoleLine() so the unit test passes.
+ * - Do NOT change field names or method signatures.
  */
 package com.practice.roomba.model;
 
@@ -21,16 +25,15 @@ public class RoombaTelemetry
 
    public String toConsoleLine()
    {
-      return String.format(
-            "state=%s | x=%.3f y=%.3f heading=%.3f | v=%.2f w=%.2f | %s",
-            currentStateName,
-            roombaPose2D.getPositionXMeters(),
-            roombaPose2D.getPositionYMeters(),
-            roombaPose2D.getHeadingRadians(),
-            linearVelocityMetersPerSecond,
-            angularVelocityRadiansPerSecond,
-            statusMessage
-      );
+      // TODO:
+      // Return a single formatted string that includes:
+      // - state name
+      // - x, y, heading (3 decimals)
+      // - v and w (2 decimals)
+      // - statusMessage
+      //
+      // Hint: use String.format(...) and match the exact format used in the unit tests.
+      throw new UnsupportedOperationException("TODO: implement toConsoleLine");
    }
 
    public RoombaPose2D getRoombaPose2D()
@@ -70,9 +73,8 @@ public class RoombaTelemetry
 
    public RoombaStateName getCurrentStateName()
    {
-   return currentStateName;
+      return currentStateName;
    }
-
 
    public void setStatusMessage(String statusMessage)
    {
