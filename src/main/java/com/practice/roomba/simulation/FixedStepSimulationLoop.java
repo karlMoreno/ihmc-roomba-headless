@@ -14,5 +14,5 @@ package src.main.java.com.practice.roomba.simulation;
 
 public final class FixedStepSimulationLoop {
     
-    public interface 
+    //public interface 
 }
