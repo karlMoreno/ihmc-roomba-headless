@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.practice.roomba.model.RoombaPose2DTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-01-25T16:45:07" hostname="firebase-ihmc-roomba-headless-1766533371873" time="0.077">
+  <properties/>
+  <testcase name="integrateForwardMovesAlongHeadingZero()" classname="com.practice.roomba.model.RoombaPose2DTest" time="0.057"/>
+  <testcase name="integrateRotationChangesHeading()" classname="com.practice.roomba.model.RoombaPose2DTest" time="0.006"/>
+  <testcase name="defaultPoseStartsAtOriginWithZeroHeading()" classname="com.practice.roomba.model.RoombaPose2DTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
